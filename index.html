@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mat-Timmerwerk</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        header {
+            background: url('257866871_394926495379557_7202149089477066151_2.jpg') center/cover no-repeat fixed;
+            height: 100vh;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 4em; /* Zmieniony rozmiar czcionki */
+        }
+
+        nav {
+            background-color: transparent;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 0.5em 1em;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        nav.scrolled {
+            background-color: #000000; /* Kolor po przewinięciu */
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5em;
+            margin: 0 10px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: rgb(49, 107, 124);
+        }
+
+        nav img {
+            height: 40px;
+            margin-left: 1em;
+        }
+
+        nav div {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        section {
+            padding: 2em;
+            margin-top: 70px;
+            background-color: #2b2b2b;
+            color: rgb(255, 255, 255);
+            text-align: center; /* Wyśrodkowanie tekstu */
+        }
+
+        section h2 {
+            color: rgb(49, 107, 124);
+        }
+
+        section .content {
+            text-align: left; /* Treść od lewej strony */
+        }
+
+        .about-me {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            padding: 2em;
+            background-color: #2b2b2b;
+            color: rgb(255, 255, 255);
+        }
+
+        .about-me img {
+            width: 30%; /* Zmieniona szerokość zdjęcia */
+            border-radius: 50%; /* Zakrąglony kształt dla zdjęcia */
+            margin-right: 2em;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+        }
+
+        footer {
+            background-color: #444444;
+            color: #ffffff;
+            padding: 1em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <img src="257866871_394926495379557_7202149089477066151_2.jpg" alt="Logo Mat-Timmerwerk">
+        <div>
+            <a href="#home">Home</a>
+            <a href="#services">Timmerwerken</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">O mnie</a>
+            <a href="#contact">Kontakt</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Mat-Timmerwerk</h1>
+        <p>Specjalizujemy się w wysokiej jakości usługach stolarskich i budowlanych. Zobacz, co możemy dla Ciebie zrobić!</p>
+    </header>
+
+    <section id="home">
+        <h2>Nasza Oferta</h2>
+        <div class="content">
+            <h3>Usługi Stolarskie</h3>
+            <p>Tutaj dodaj opis usług stolarskich...</p>
+
+            <h3>Usługi Budowlane</h3>
+            <p>Tutaj dodaj opis usług budowlanych...</p>
+
+            <h3>Materiały</h3>
+            <p>Jeśli dostarczamy specjalne materiały, tutaj dodaj informacje...</p>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Nasze Projekty</h2>
+        <div class="content">
+            <p>Dodaj tutaj zdjęcia i opisy swoich realizacji stolarskich i budowlanych.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about-me">
+        <img src="mati.jpg" alt="Twoje Zdjęcie">
+        <div>
+            <h2>O mnie</h2>
+            <p>Tutaj dodaj krótki opis o sobie i swoich umiejętnościach. Możesz także podać informacje o swoim doświadczeniu zawodowym.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <div class="content">
+            <p>Dodaj formularz kontaktowy lub informacje kontaktowe, aby klienci mogli się skontaktować z Tobą.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.tiktok.com/@mattimmerwerk" target="_blank"><img src="pngwing.com.png" alt="TikTok"></a>
+            <a href="https://www.instagram.com/mat_timmerwerk_/" target="_blank"><img src="insta.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/profile.php?id=100063815869877" target="_blank"><img src="facebook_logo.png" alt="Facebook"></a>
+        </div>
+        <p>&copy; 2023 Mat-Timmerwerk. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            var nav = document.querySelector("nav");
+            nav.classList.toggle("scrolled", window.scrollY > 0);
+        });
+    </script>
+
+</body>
+</html>
